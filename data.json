@@ -1,0 +1,93 @@
+{
+  "secciones": [
+    { "cod": "R", "name": "Resoluciones", "order": 1 },
+    { "cod": "A", "name": "Actas", "order": 2 },
+    { "cod": "C", "name": "Compras", "order": 3 },
+    { "cod": "D", "name": "Digestos", "order": 4 },
+    { "cod": "O", "name": "Ordenes del día", "order": 5 },
+    { "cod": "I", "name": "Indices", "order": 6 }
+  ],
+  "orgas": [
+    {
+      "name": "Rectorado",
+      "isF": "no",
+      "sigla": "DR",
+      "secciones": [
+        { "cod": "R", "ini": 1972, "fin": 2022, "titulo": "Resoluciones de " },
+        { "cod": "C", "ini": 2003, "fin": 2008, "titulo": "Compras de " },
+        { "cod": "D", "ini": 2001, "fin": 2022, "titulo": "Digestos de " },
+        { "cod": "I", "ini": 1972, "fin": 2022, "titulo": "Indices de " }
+      ]
+    },
+    {
+      "name": "Consejo Superior",
+      "isF": "no",
+      "sigla": "CS",
+      "secciones": [
+        { "cod": "R", "ini": 1990, "fin": 2022, "titulo": "Resoluciones del " },
+        { "cod": "A", "ini": 1995, "fin": 2022, "titulo": "Actas del " },
+        {
+          "cod": "O",
+          "ini": 2001,
+          "fin": 2022,
+          "titulo": "Ordenes del día del "
+        },
+        { "cod": "D", "ini": 1990, "fin": 2022, "titulo": "Digestos del " }
+      ]
+    },
+    {
+      "name": "Facultad de Cs. Exactas",
+      "isF": "si",
+      "sigla": "EXA",
+      "secciones": [
+        {
+          "cod": "R",
+          "titulo": "Resoluciones de la ",
+          "subsecciones": [
+            {
+              "ini": 1990,
+              "fin": 2022,
+              "titulo": "Consejo Directivo",
+              "sigla": "cdexa"
+            },
+            { "ini": 1990, "fin": 2022, "titulo": "Decanato", "sigla": "dexa" }
+          ]
+        },
+        {
+          "cod": "A",
+          "titulo": "Actas de la ",
+          "subsecciones": [
+            { "ini": 1990, "fin": 2022, "titulo": "Consejo Directivo" }
+          ]
+        },
+        {
+          "cod": "O",
+          "titulo": "Ordenes del día de la ",
+          "subsecciones": [
+            { "ini": 1990, "fin": 2022, "titulo": "Consejo Directivo" }
+          ]
+        },
+        {
+          "cod": "C",
+          "titulo": "Compras de la ",
+          "subsecciones": [{ "ini": 1990, "fin": 2022, "titulo": "Decanato" }]
+        },
+
+        {
+          "cod": "I",
+          "titulo": "Indices de la ",
+          "subsecciones": [{ "ini": 1990, "fin": 2022, "titulo": "Decanato" }]
+        },
+
+        {
+          "cod": "D",
+          "titulo": "Digestos de la ",
+          "subsecciones": [
+            { "ini": 1990, "fin": 2022, "titulo": "Consejo Directivo" },
+            { "ini": 1990, "fin": 2022, "titulo": "Decanato" }
+          ]
+        }
+      ]
+    }
+  ]
+}
