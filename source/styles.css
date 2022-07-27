@@ -2919,6 +2919,8 @@ div {
 	color : #46A948;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	inline-size: 100%;
+    overflow-wrap: break-word;
 }
 .resos p{
 	color : #767676;
