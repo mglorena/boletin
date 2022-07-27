@@ -29,15 +29,19 @@
 	margin-left: -20px;
     margin-right: -20px;
 }
-
+footer {
+    
+	vertical-align: top;
+}
 .main-footer {
 	background: #E9E9E9;
+	vertical-align: top;
 }
 .main-footer h5 {
 	margin-top: 0px;
-	color:#767676;
+	color:#4F4848;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 14px;
 }
 .main-footer .datos {
 	font-size: 12px;
@@ -2915,12 +2919,15 @@ div {
 	background-color: #0161c7;
 	border-color: #0161c7;
 }
+#divMostrar{
+inline-size: 100%;
+    overflow-wrap: break-word;
+}
 .resos{
 	color : #46A948;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	inline-size: 100%;
-    overflow-wrap: break-word;
+	
 }
 .resos p{
 	color : #767676;
@@ -2928,11 +2935,25 @@ div {
 	
 }
 .orgas p{
-	color : #767676;
+	color : #4F4848;
 	font-weight: bold;
+	font-weight: 16px;
+}
+h5 .h5-footer{
+	color : #4F4848;
+	font-weight: bold;
+	font-weight: 16px;
 }
 .resos p small{
 	color : #767676;
 	font-weight: bold;
 	margin-top: 15px;
+}
+.activeSec{
+	background-color: #3E801B;
+	color: #fff;
+}
+.activeSec > a > h6{
+	
+	color: #fff;
 }

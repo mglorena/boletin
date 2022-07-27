@@ -17,7 +17,7 @@ body {
 
 body {
   background: #F9F9F9;
-  color: #111;
+  color: #4F4848;
   display: table;
   width: 100%; }
 
@@ -1131,7 +1131,7 @@ a.btn {
 .main-footer {
   background: #fff;
   padding-bottom: 32px;
-  padding-top: 60px; }
+  padding-top: 15px; }
   .main-footer .row > div:first-child {
     padding-right: 30px; }
   .main-footer ul {
@@ -1684,7 +1684,7 @@ a.panel:hover, a.panel:focus {
   min-height: 192px !important; }
 
 .panels-row {
-  display: flex;
+  /*display: flex;*/
   flex-wrap: wrap;
   flex-direction: row; }
   .panels-row > div {

@@ -22,32 +22,19 @@ function searchInfoSec(cod, divsecciones) {
     console.log(error);
   }
 }
-function links(sec, org) {
-  var html = "<p>";
+function links(sec, org, div) {
+  var html = "<div style='maring:10px'>";
   var count = 0;
   var sep = "";
   try {
     for (var k = sec.fin; k >= sec.ini; k--) {
-      /*if (count > 12) {
-        html += "<br/>";
-        count = 0;
-      }*/
-      html +=
-        sep +
-        "<a href='" +
-        host +
-        org.sigla.toLowerCase() +
-        "/" +
-        sec.cod +
-        k +
-        "'>" +
-        k +
-        "</a>";
-      sep = "&nbsp;|&nbsp;";
+      var url = host + div.sigla.toLowerCase() + "/" + sec.cod + k;
+      html += "<a href='" + url + "'>" + sep + k + "</a>";
+      sep = " | ";
       count++;
     }
 
-    html += "</p>";
+    html += "</div>";
   } catch (error) {
     console.log("Error generando links de " + org.sigla);
     console.log(error);
@@ -70,7 +57,7 @@ function constrLinks(org, listSecciones) {
           html +=
             "<div id='" + idDiv + "'  class='resos " + classCss + "' hidden >";
           html += "<p>" + dataSec[1] + dvs.name + "</p>";
-          html += links(sec, org);
+          html += links(sec, org, dvs);
           html += "</div>";
         } else {
           html += constLinkFolder(sec.seccionFolder, org.sigla, sec.nameFolder);
@@ -138,7 +125,7 @@ function buildSecciones(secciones) {
   try {
     for (var i = 0; i < secciones.length; i++) {
       sec = secciones[i];
-      if (sec.order == "1") cA = " class='active' ";
+      if (sec.order == "1") cA = " class='active activeSec' ";
       else cA = "";
 
       htmlSec +=
@@ -182,9 +169,11 @@ function showInfoSeccion(seccion) {
 function mostrar(sigla) {
   try {
     ocultarDivs();
+    $("#divMostrar").find(".punteroOver").removeClass("punteroOver");
     $("#p" + sigla).addClass("punteroOver");
     var seccion = buscarSeccion();
     showInfoSeccion(seccion);
+    $("#" + seccion).focus();
     var classCss = seccion + sigla;
     var divList = $("div[id^='" + classCss + "']");
     if (divList.length == 0) {
@@ -196,6 +185,7 @@ function mostrar(sigla) {
       $("#divMostrar")
         .find("." + classCss)
         .show();
+
       $("#divMessage").hide();
     }
   } catch (error) {
@@ -214,9 +204,12 @@ function buscarSeccion() {
 function openSeccion(cod) {
   var idSeccionActiva = buscarSeccion();
   $("#" + idSeccionActiva).removeClass("active");
+  $("#" + idSeccionActiva).removeClass("activeSec");
   $("#" + cod).addClass("active");
+  $("#" + cod).addClass("activeSec");
   showInfoSeccion(cod);
   ocultarDivs();
+  $("#" + cod).focus();
   // ocultarContacto();
 }
 /*function mostrarContacto() {

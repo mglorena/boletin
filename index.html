@@ -47,7 +47,7 @@
         <header>
             <nav class="navbar navbar-top navbar-default" role="navigation">
                 <div class="container">
-                    <div>
+                    
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle"
                                 data-toggle="collapse"
@@ -73,86 +73,40 @@
                                 <li>
                                     <a href="http://www.unsa.edu.ar">Institucional</a>
                                 </li>
-                               <!-- <li>
-                                    <a href="#"
-                                    
-                                    id="aContacto"
-                                    onclick="mostrarContacto();">
-                                    Contacto</a>
-                                    <a href="http://bo.unsa.edu.ar/contacto"
-                                        onclick="sendContactoEvent('Contacto')">Contacto</a>
-                                </li>-->
-                            </ul>
+                             </ul>
                         </div>
-                    </div>
                 </div>
             </nav>
         </header>
 
         <div class="container">
             <div class="row">
-                <div>
-                    <div class="row">
-                        <div class="col-md-3" id="divSecciones">
+                <div class="col-md-3" id="divSecciones" >
                           <!---- Se cargan las secciones -->
-                        </div>
-                        <div id="divContacto" hidden>
-                            <div class="row">
-                                <div class="col-md-8"> 
-                                        <a href="#" onclick="ocultarContacto();">Volver</a>
-                                        <div class="col-title">
-                                            <h5>
-                                                Información de contacto 
-                                            </h5>
-                                        </div>
-                                        <div >
-                                            <small>Celular : 3875226928</small> 
-                                            <small>Email : mlgarcia@tic.unsa.edu.ar</small> 
-         
-                                     </div>
-                                </div>
-                            </div>
-                            
-                            
-                        </div>
-                        <div class="col-md-8" id="divSeccionData"> 
-                            <div class="col-title" id="divTitleSeccion">
-                                <h5>Resoluciones<br> <small>1º sección</small>
-                                </h5>
-                            </div>
-                            <hr class="secciones-titulo-hr">
-                            <div class="row">
-                                <div class="col-md-12"> 
-                                    <div class="panel
-                                        panel-default panel-menu
-                                        menu-rubros-panel">
-                                        <div id="collapseOne" role="tabpanel"
-                                            aria-labelledby="headingOne">
-                                            <div class="panel-body">
-                                                <div class="row panels-row">
-                                                    <div class="col-md-6
-                                                        col-sm-4 col-xs-6
-                                                        form-group orgas">
-                                                        <p> Organos de Gobierno<br>
-                                                            <span
-                                                                class="menuRubros">
-                                                                <a
-                                                                    class="puntero"
-                                                                    id="pAU"
-                                                                    onclick="mostrar('AU');">
-                                                                    Asamblea
-                                                                    Universitaria</a>
-                                                                <a
-                                                                    class="puntero"
-                                                                    id="pR"
-                                                                    onclick="mostrar('R');">
-                                                                    Rectorado</a>
-                                                                <a
-                                                                    class="puntero"
-                                                                    id="pCS"
-                                                                    onclick="mostrar('CS');">
-                                                                    Consejo
-                                                                    Superior</a>
+                </div>
+                <div class="col-md-8" id="divSeccionData" > 
+                    <div class="col-title" id="divTitleSeccion">
+                        <h5>Resoluciones<br> <small>1º sección</small></h5>
+                    </div>
+                      
+                    <!--<div class="col-md-12"> -->
+                      
+                        <div class="panel panel-default panel-menu menu-rubros-panel">
+                        <div id="collapseOne" >
+                            <div class="panel-body">
+                                <div class="row panels-row">
+                                   <div class="col-md-6 col-sm-4 col-xs-6 form-group orgas">
+                                        <p> Organos de Gobierno<br>
+                                        <span class="menuRubros">
+                                        <a class="puntero" id="pAU" onclick="mostrar('AU');">
+                                         Asamblea Universitaria
+                                        </a>
+                                        <a class="puntero" id="pR" onclick="mostrar('R');">
+                                         Rectorado
+                                        </a>
+                                        <a class="puntero" id="pCS" onclick="mostrar('CS');">
+                                         Consejo Superior
+                                        </a>
                                                                 <a
                                                                     class="puntero"
                                                                     id="pCI"
@@ -296,196 +250,42 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="row">
+                                    <div class="col-md-12" id="divMostrar">
+                                        
+                                    </div>
+                                    <div id="divMessage" hidden></div>
+                                </div>    
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12" id="divMostrar">
-                                
-                            </div>
-                            <div id="divMessage" hidden></div>
-                        </div>
-                    </div>
-                </div>
-
+                         
             </div>
-
-
-
-
-            <footer
-                class="main-footer
-                sticky-footer">
-                <div
-                    class="container">
-                    <!-- Superior -->
-                    <div
-                        class="row
-                        hidden-xs
-                        hidden-sm">
-                        <div
-                            class="col-md-3
-                            col-sm-6
-                            col-xs-12">
-                        </div>
-                        <div
-                            class="col-md-3
-                            col-sm-6
-                            col-xs-12">
-                        </div>
-                        <div
-                            class="col-md-3
-                            col-sm-6
-                            col-xs-12">
-                        </div>
-                        <div
-                            class="col-md-3
-                            col-sm-6
-                            col-xs-12">
-                            <h5>Contacto</h5>
-                            <p
-                                class="datos
-                                text-muted
-                                small">
-                                <strong>TELÉFONOS:</strong>
-                                387-4258725</p>
-                            <p
-                                class="datos
-                                text-muted
-                                small">
-                                <strong>SEDE
-                                    CENTRAL:
-                                </strong>Avda
-                                Bolivia
-                                5150,
-                                SALTA.
-                                (4400)</p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-
-
-
-            <div
-                id="modalEjemplo"
-                class="modal
-                fade
-                bs-example-modal-lg"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="myLargeModalLabel">
-                <div
-                    class="modal-dialog
-                    modal-lg">
-                    <div
-                        class="modal-content">
-                        <div
-                            class="modal-header">
-                            <button
-                                type="button"
-                                class="close"
-                                data-dismiss="modal"
-                                aria-label="Close"><span
-                                    aria-hidden="true">×</span></button>
-                            <h4
-                                class="modal-title"
-                                id="myModalLabel">Delegación
-                                Virtual</h4>
-                        </div>
-                        <div
-                            class="modal-body">
-                            <p>Al
-                                hacer
-                                clic
-                                en
-                                este
-                                enlace
-                                usted
-                                acepta
-                                ser
-                                dirigido
-                                fuera
-                                de
-                                nuestro
-                                sitio
-                                a
-                                la
-                                página
-                                <a
-                                    href="https://dv.boletinoficial.gob.ar/"
-                                    target="_blank">https://dv.boletinoficial.gob.ar</a>
-                                cuya
-                                información
-                                es
-                                proporcionada
-                                por
-                                la
-                                Dirección
-                                Nacional
-                                del
-                                Sistema
-                                Argentino
-                                de
-                                Información
-                                Jurídica
-                                (SAIJ)
-                                dependiente
-                                del
-                                Ministerio
-                                de
-                                Justicia
-                                y
-                                Derechos
-                                Humanos
-                                de
-                                la
-                                Nación.</p>
-                        </div>
-                        <div
-                            class="modal-footer
-                            nomarginT">
-                            <div
-                                class="row">SSSSS2
-                                <div
-                                    class="col-md-6
-                                    col-xs-12">
-                                    <button
-                                        type="button"
-                                        class="btn
-                                        btn-link
-                                        btn-sm
-                                        pull-left
-                                        margin-0
-                                        btn-normativa"
-                                        data-dismiss="modal">Cerrar</button>
+                <footer class="main-footer">
+                  <div class="container">
+                            
+                                <h5 class="h5-footer">Contacto</h5>
+                                <p
+                                    class="datos
+                                    text-muted
+                                    small">
+                                    <strong>TELÉFONOS:</strong>
+                                    387-4258725</p>
+                                <p
+                                    class="datos
+                                    text-muted
+                                    small">
+                                    <strong>SEDE
+                                        CENTRAL:
+                                    </strong>Avda
+                                    Bolivia
+                                    5150,
+                                    SALTA.
+                                    (4400)</p>
+                            
+                        
                                 </div>
-                                <div
-                                    class="col-md-6
-                                    col-xs-12">
-                                    <a
-                                        href="https://dv.boletinoficial.gob.ar/"
-                                        target="_blank">
-                                        <button
-                                            onclick="closeModal('modalDelegacionVirtual')"
-                                            class="btn
-                                            btn-primary
-                                            btn-sm
-                                            margin-0
-                                            btn-normativa">Ir
-                                            a
-                                            Delegación
-                                            Virtual</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+                </footer>
+            
 
 
 
