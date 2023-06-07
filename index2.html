@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="theme-color" content="#0072b8">
+        <meta name="msapplication-navbutton-color" content="#0072b8">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0072b8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOLETIN OFICIAL UNIVERSIDAD NACIONAL DE SALTA</title>
+        <meta name="description" content="BOUNSA - Boletín Oficial de la
+            Universidad Nacional de Salta">
+        <meta property="og:url" content="http://bo.unsa.edu.ar/index2.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Boletín Oficial de la Universidad
+            Nacional de Salta">
+        <meta property="og:description" content="Boletín Oficial de la
+            Universidad Nacional de Salta">
+        <meta property="og:image" content="/images/logoboletin1.png">
+        <meta property="og:locale" content="es_AR">
+        <meta name="twitter:card" content="Boletín Oficial de la Universidad
+            Nacional de Salta">
+        <meta name="twitter:title" content="Boletín Oficial de la Universidad
+            Nacional de Salta">
+        <meta name="twitter:description" content="Boletín Oficial de la
+            Universidad Nacional de Salta">
+        <meta name="twitter:image" content="/images/bora_share.jpg">
+        <link rel="icon" type="image/x-icon"
+            href="http://bo.unsa.edu.ar/favicon.ico">
+        <link href="source/roboto-fontface.css" rel="stylesheet"
+            type="text/css">
+        <link href="source/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="source/font-awesome.min.css" rel="stylesheet"
+            type="text/css">
+        <link href="source/poncho.css" rel="stylesheet" type="text/css">
+        <link href="source/styles.css?v=0.1" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="source/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="source/bootstrap.min.js"></script>
+        <script type="text/javascript" src="source/busqueda.js?v=0.8"></script>
+        <link type="text/css" rel="stylesheet" href="source/icon"
+            class="_access-font-icon-0"></head>
+    <body>
+        <div id="loader" class="loader-div" style="display: none;">
+            <img src="source/loader.gif">
+        </div>
+
+        <header>
+            <nav class="navbar navbar-top navbar-default" role="navigation">
+                <div class="container">
+                    
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle"
+                                data-toggle="collapse"
+                                data-target="#main-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand"
+                                href="http://bo.unsa.edu.ar/index2.html">
+                                <img alt="Brand" src="images/logovoletin_v5.png" height="80px">
+                                <h1 class="sr-only">Universidad Nacional de
+                                    Salta
+                                    <small>UNSa - Salta</small>
+                                </h1>
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse"
+                            id="main-navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="http://www.unsa.edu.ar">Institucional</a>
+                                </li>
+                             </ul>
+                        </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" id="divSecciones" >
+                          <!---- Se cargan las secciones -->
+                </div>
+                <div class="col-md-8" id="divSeccionData" > 
+                    <div>
+                        <h5>Búsqueda en Google</h5>
+                        <script async src="https://cse.google.com/cse.js?cx=35490bc05459d43a1">
+                        </script>
+                        <div class="gcse-search"></div>
+                    </div>
+                    <div class="col-title" id="divTitleSeccion">
+                        <h5>Resoluciones<br> <small>1º sección</small></h5>
+                    </div>
+                      
+                    <!--<div class="col-md-12"> -->
+                      
+                        <div class="panel panel-default panel-menu menu-rubros-panel">
+                        <div id="collapseOne" >
+                            <div class="panel-body">
+                                <div class="row panels-row"  id="pnlOrgas">
+                                   <div class="col-md-6 col-sm-4 col-xs-6 form-group orgas">
+                                        <p> Órganos de Gobierno<br>
+                                        <span class="menuRubros">
+                                        <a class="puntero" id="pAU" onclick="mostrar('AU');">
+                                         Asamblea Universitaria
+                                        </a>
+                                        <a class="puntero" id="pR" onclick="mostrar('R');">
+                                         Rectorado
+                                        </a>
+                                        <a class="puntero" id="pCS" onclick="mostrar('CS');">
+                                         Consejo Superior
+                                        </a>
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pCI"
+                                                                    onclick="mostrar('CI');">
+                                                                    Consejo
+                                                                    de
+                                                                    Investigación</a>
+                                                            </span>
+
+
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-6
+                                                        col-sm-4 col-xs-6
+                                                        form-group orgas">
+                                                        <p>
+
+
+                                                            Facultades<br>
+                                                            <span
+                                                                class="menuRubros">
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pECO"
+                                                                    onclick="mostrar('ECO');">
+                                                                    Facultad
+                                                                    de Cs.
+                                                                    Económicas</a>
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pING"
+                                                                    onclick="mostrar('ING');">
+                                                                    Facultad
+                                                                    de
+                                                                    Ingeniería</a>
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pHUM"
+                                                                    onclick="mostrar('HUM');">
+                                                                    Facultad
+                                                                    de
+                                                                    Humanidades</a>
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pEXA"
+                                                                    onclick="mostrar('EXA');">
+                                                                    Facultad
+                                                                    de Cs.
+                                                                    Exactas</a>
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pSAL"
+                                                                    onclick="mostrar('SAL');">
+                                                                    Facultad
+                                                                    de Cs.
+                                                                    de la
+                                                                    Salud</a>
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pNAT"
+                                                                    onclick="mostrar('NAT');">
+                                                                    Facultad
+                                                                    de Cs.
+                                                                    Naturales</a>
+                                                            </span>
+
+
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-6
+                                                        col-sm-4 col-xs-6
+                                                        form-group orgas">
+                                                        <p>
+
+
+                                                            Sedes Regionales<br>
+                                                            <span
+                                                                class="menuRubros">
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pSRO"
+                                                                    onclick="mostrar('SRO');">
+                                                                    Orán</a>
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pSRT"
+                                                                    onclick="mostrar('SRT');">
+                                                                    Tartagal</a>
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pSRMRF"
+                                                                    onclick="mostrar('SRMRF');">
+                                                                    Metán -
+                                                                    Rosario
+                                                                    de la
+                                                                    Frontera</a>
+                                                            </span>
+
+
+                                                        </p>
+
+                                                    </div>
+                                                    <div class="col-md-6
+                                                        col-sm-4 col-xs-6
+                                                        form-group orgas">
+                                                        <p>
+
+
+                                                            Institutos<br>
+                                                            <span
+                                                                class="menuRubros">
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pIEM"
+                                                                    onclick="mostrar('IEM');">
+                                                                    Instituto
+                                                                    de
+                                                                    Educación
+                                                                    Media</a>
+                                                                <a
+                                                                    class="puntero"
+                                                                    id="pIEMT"
+                                                                    onclick="mostrar('IEMT');">
+                                                                    Instituto
+                                                                    de
+                                                                    Educación
+                                                                    Media
+                                                                    Tartagal</a>
+                                                            </a>
+
+
+
+
+                                                        </span>
+
+
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" id="divMostrar">
+                                        
+                                    </div>
+                                    <div id="divMessage" hidden></div>
+                                </div>    
+                        </div>
+
+                         
+            </div>
+                <footer class="main-footer">
+                  <div class="container">
+                            
+                                <h5 class="h5-footer">Contacto</h5>
+                                <p
+                                    class="datos
+                                    text-muted
+                                    small">
+                                    <strong>TELÉFONOS:</strong>
+                                    387-4258725</p>
+                                <p
+                                    class="datos
+                                    text-muted
+                                    small">
+                                    <strong>SEDE
+                                        CENTRAL:
+                                    </strong>Avda
+                                    Bolivia
+                                    5150,
+                                    SALTA.
+                                    (4400)</p>
+                            
+                        
+                                </div>
+                </footer>
+            
+
+
+<div id="contenedor" hidden></div>
+<div id="contenedorFolder" hidden></div>
+
+
+        </body></html>

@@ -1,325 +1,628 @@
 {
-  "secciones": [
-    { "cod": "R", "name": "Resoluciones", "order": 1, "t": "Resoluciones - " },
-    { "cod": "A", "name": "Actas", "order": 2, "t": "Actas - " },
-    { "cod": "C", "name": "Compras", "order": 3, "t": "Compras - " },
-    { "cod": "D", "name": "Digestos", "order": 4, "t": "Digestos - " },
-    {
-      "cod": "O",
-      "name": "Ordenes del día",
-      "order": 5,
-      "t": "Ordenes del día - "
-    },
-    { "cod": "I", "name": "Indices", "order": 6, "t": "Indices - " },
-    { "cod": "P", "name": "Presupuesto", "order": 7, "t": "Presupuestos - " }
-  ],
-  "orgas": [
-    {
-      "name": "Consejo Superior",
-      "isF": "no",
-      "sigla": "CS",
-      "divisiones": [
+    "orgas": [
         {
-          "name": "Consejo Superior",
-          "sigla": "cs",
-          "secciones": [
-            { "cod": "R", "ini": 1990, "fin": 2022 },
-            { "cod": "A", "ini": 1995, "fin": 2022 },
-            {
-              "cod": "D",
-              "ini": 0,
-              "fin": 0,
-              "nameFolder": "cs/digestos",
-              "seccionFolder": 4
-            },
-            { "cod": "O", "ini": 2001, "fin": 2022 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Asamblea Universitaria",
-      "isF": "no",
-      "sigla": "AU",
-      "seccionFolder": 1,
-      "nameFolder": "au"
-    },
-    {
-      "name": "Rectorado",
-      "isF": "no",
-      "sigla": "R",
-      "divisiones": [
-        {
-          "name": "Despacho de Rectorado",
-          "sigla": "DR",
-          "secciones": [
-            { "cod": "R", "ini": 1972, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2008 },
-            {
-              "cod": "D",
-              "ini": 0,
-              "fin": 0,
-              "nameFolder": "dr/digestos",
-              "seccionFolder": 4
-            },
-            { "cod": "I", "ini": 1972, "fin": 2022 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Sede Regional Tartagal",
-      "isF": "no",
-      "sigla": "SRT",
-      "divisiones": [
-        {
-          "name": "Sede Regional Tartagal",
-          "sigla": "SRT",
-          "secciones": [
-            { "cod": "R", "ini": 2001, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2008 },
-            { "cod": "P", "ini": 2003, "fin": 2008 },
-            { "cod": "A", "ini": 2001, "fin": 2008 },
-            { "cod": "O", "ini": 2001, "fin": 2008 },
-            { "cod": "I", "ini": 2020, "fin": 2022 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Sede Regional Orán",
-      "isF": "no",
-      "sigla": "SRO",
-      "divisiones": [
-        {
-          "name": "Sede Regional Orán",
-          "sigla": "SRO",
-          "secciones": [
-            { "cod": "R", "ini": 2001, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2010 },
-            { "cod": "P", "ini": 2003, "fin": 2010 },
-            { "cod": "A", "ini": 2001, "fin": 2010 },
-            { "cod": "O", "ini": 2001, "fin": 2010 },
-            { "cod": "I", "ini": 1972, "fin": 2022 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Sede Regional Metán - Rosario de la Frontera",
-      "isF": "no",
-      "sigla": "SRMRF",
-      "divisiones": [
-        {
-          "name": "Sede Regional Metán - Rosario de la Frontera",
-          "sigla": "SRMRF",
-          "secciones": [{ "cod": "R", "ini": 2011, "fin": 2022 }]
-        }
-      ]
-    },
-    {
-      "name": "Institudo de Educación Media - Tartagal",
-      "isF": "no",
-      "sigla": "IEMT",
-      "divisiones": [
-        {
-          "name": "IEM-Tartagal",
-          "sigla": "IEMT",
-          "secciones": [{ "cod": "R", "ini": 2007, "fin": 2022 }]
-        }
-      ]
-    },
-
-    {
-      "name": "Institudo de Educación Media",
-      "isF": "no",
-      "sigla": "IEM",
-      "divisiones": [
-        {
-          "name": "Institudo de Educación Media",
-          "sigla": "IEM",
-          "secciones": [{ "cod": "R", "ini": 2005, "fin": 2010 }]
-        }
-      ]
-    },
-    {
-      "name": "Consejo de Investigación",
-      "isF": "si",
-      "sigla": "CI",
-      "divisiones": [
-        {
-          "name": "Consejo",
-          "sigla": "cci",
-          "secciones": [
-            { "cod": "R", "ini": 2001, "fin": 2022 },
-            { "cod": "A", "ini": 2001, "fin": 2022 },
-            { "cod": "I", "ini": 2018, "fin": 2022 },
-            { "cod": "O", "ini": 2001, "fin": 2022 }
-          ]
+            "isF": "no",
+            "name": "Consejo Superior",
+            "sigla": "CS",
+            "divisiones": [
+                {
+                    "name": "Consejo Superior",
+                    "sigla": "cs",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1990,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2023,
+                            "ini": 1994,
+                            "cod": "A"
+                        },
+                        {
+                            "seccionFolder": 4,
+                            "fin": 0,
+                            "ini": 10000,
+                            "nameFolder": "cs/digestos",
+                            "cod": "D"
+                        },
+                        {
+                            "fin": 2023,
+                            "ini": 1994,
+                            "cod": "O"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "name": "Presidencia",
-          "sigla": "ci",
-          "secciones": [
-            { "cod": "R", "ini": 2001, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2011 },
-            { "cod": "I", "ini": 2018, "fin": 2022 },
-            { "cod": "P", "ini": 2003, "fin": 2011 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Facultad de Ingeniería",
-      "isF": "si",
-      "sigla": "ING",
-      "divisiones": [
-        {
-          "name": "Consejo Directivo",
-          "sigla": "cding",
-          "secciones": [
-            { "cod": "R", "ini": 2001, "fin": 2022 },
-            { "cod": "A", "ini": 2001, "fin": 2010 },
-            { "cod": "O", "ini": 2001, "fin": 2010 }
-          ]
+            "seccionFolder": 1,
+            "isF": "no",
+            "name": "Resoluciones - Asamblea Universitaria",
+            "sigla": "AU",
+            "nameFolder": "au"
         },
         {
-          "name": "Decanato",
-          "sigla": "ding",
-          "secciones": [
-            { "cod": "R", "ini": 2011, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2010 },
-            { "cod": "P", "ini": 2003, "fin": 2010 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Facultad de Humanidades",
-      "isF": "si",
-      "sigla": "HUM",
-      "divisiones": [
-        {
-          "name": "Consejo Directivo",
-          "sigla": "cdh",
-          "secciones": [
-            { "cod": "R", "ini": 1991, "fin": 2022 },
-            { "cod": "A", "ini": 2001, "fin": 2011 },
-            { "cod": "O", "ini": 2001, "fin": 2011 }
-          ]
+            "isF": "no",
+            "name": "Rectorado",
+            "sigla": "R",
+            "divisiones": [
+                {
+                    "name": "Despacho de Rectorado",
+                    "sigla": "DR",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1972,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 1990,
+                            "ini": 1990,
+                            "cod": "C"
+                        },
+                        {
+                            "seccionFolder": 4,
+                            "fin": 0,
+                            "ini": 10000,
+                            "nameFolder": "dr/digestos",
+                            "cod": "D"
+                        },
+                        {
+                            "fin": 2023,
+                            "ini": 1972,
+                            "cod": "I"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "name": "Decanato",
-          "sigla": "dh",
-          "secciones": [
-            { "cod": "R", "ini": 1990, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2011 },
-            { "cod": "P", "ini": 2003, "fin": 2011 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Facultad de Cs. de la Salud",
-      "isF": "si",
-      "sigla": "SAL",
-      "divisiones": [
-        {
-          "name": "Consejo Directivo",
-          "sigla": "cdsalud",
-          "secciones": [
-            { "cod": "R", "ini": 1980, "fin": 2022 },
-            { "cod": "A", "ini": 2001, "fin": 2011 },
-            { "cod": "I", "ini": 2001, "fin": 2022 },
-            { "cod": "O", "ini": 2001, "fin": 2011 }
-          ]
+            "isF": "no",
+            "name": "Sede Regional Tartagal",
+            "sigla": "SRT",
+            "divisiones": [
+                {
+                    "name": "Sede Regional Tartagal",
+                    "sigla": "SRT",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1995,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2008,
+                            "ini": 2003,
+                            "cod": "C"
+                        },
+                        {
+                            "fin": 2008,
+                            "ini": 2003,
+                            "cod": "P"
+                        },
+                        {
+                            "fin": 2008,
+                            "ini": 2003,
+                            "cod": "A"
+                        },
+                        {
+                            "fin": 2008,
+                            "ini": 2003,
+                            "cod": "O"
+                        },
+                        {
+                            "fin": 2023,
+                            "ini": 2020,
+                            "cod": "I"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "name": "Decanato",
-          "sigla": "dsalud",
-          "secciones": [
-            { "cod": "R", "ini": 1980, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2011 },
-            { "cod": "I", "ini": 2001, "fin": 2022 },
-            { "cod": "P", "ini": 2003, "fin": 2011 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Facultad de Cs. Naturales",
-      "isF": "si",
-      "sigla": "NAT",
-      "divisiones": [
-        {
-          "name": "Consejo Directivo",
-          "sigla": "cdnat",
-          "secciones": [
-            { "cod": "R", "ini": 2001, "fin": 2022 },
-            { "cod": "A", "ini": 2001, "fin": 2022 },
-            { "cod": "O", "ini": 2001, "fin": 2022 }
-          ]
+            "isF": "no",
+            "name": "Sede Regional Or\u00e1n",
+            "sigla": "SRO",
+            "divisiones": [
+                {
+                    "name": "Sede Regional Or\u00e1n",
+                    "sigla": "SRO",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1995,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2011,
+                            "ini": 2003,
+                            "cod": "C"
+                        },
+                        {
+                            "fin": 2011,
+                            "ini": 2003,
+                            "cod": "P"
+                        },
+                        {
+                            "fin": 2012,
+                            "ini": 2003,
+                            "cod": "A"
+                        },
+                        {
+                            "fin": 2011,
+                            "ini": 2003,
+                            "cod": "O"
+                        },
+                        {
+                            "fin": 0,
+                            "ini": 10000,
+                            "cod": "I"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "name": "Decanato",
-          "sigla": "dnat",
-          "secciones": [
-            { "cod": "R", "ini": 2001, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2011 },
-            { "cod": "P", "ini": 2003, "fin": 2011 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Facultad de Cs. Económicas",
-      "isF": "si",
-      "sigla": "ECO",
-      "divisiones": [
-        {
-          "name": "Consejo Directivo",
-          "sigla": "cdeco",
-          "secciones": [
-            { "cod": "R", "ini": 2001, "fin": 2022 },
-            { "cod": "A", "ini": 2001, "fin": 2022 },
-            { "cod": "O", "ini": 2001, "fin": 2022 }
-          ]
+            "isF": "no",
+            "name": "Sede Regional Met\u00e1n - Rosario de la Frontera",
+            "sigla": "SRMRF",
+            "divisiones": [
+                {
+                    "name": "Sede Regional Met\u00e1n - Rosario de la Frontera",
+                    "sigla": "SRMRF",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 2011,
+                            "cod": "R"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "name": "Decanato",
-          "sigla": "deco",
-          "secciones": [
-            { "cod": "R", "ini": 2001, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2013 },
-            { "cod": "P", "ini": 2003, "fin": 2012 }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Facultad de Cs. Exactas",
-      "isF": "si",
-      "sigla": "EXA",
-      "divisiones": [
-        {
-          "name": "Consejo Directivo",
-          "sigla": "cdex",
-          "secciones": [
-            { "cod": "R", "ini": 1988, "fin": 2022 },
-            { "cod": "A", "ini": 2001, "fin": 2012 },
-            { "cod": "O", "ini": 2001, "fin": 2012 }
-          ]
+            "isF": "no",
+            "name": "Institudo de Educaci\u00f3n Media - Tartagal",
+            "sigla": "IEMT",
+            "divisiones": [
+                {
+                    "name": "IEM-Tartagal",
+                    "sigla": "IEMT",
+                    "secciones": [
+                        {
+                            "fin": 2022,
+                            "ini": 2007,
+                            "cod": "R"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "name": "Decanato",
-          "sigla": "dex",
-          "secciones": [
-            { "cod": "R", "ini": 1988, "fin": 2022 },
-            { "cod": "C", "ini": 2003, "fin": 2022 },
-            { "cod": "P", "ini": 2003, "fin": 2012 }
-          ]
+            "isF": "no",
+            "name": "Institudo de Educaci\u00f3n Media",
+            "sigla": "IEM",
+            "divisiones": [
+                {
+                    "name": "Institudo de Educaci\u00f3n Media",
+                    "sigla": "IEM",
+                    "secciones": [
+                        {
+                            "fin": 2009,
+                            "ini": 2005,
+                            "cod": "R"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "isF": "si",
+            "name": "Consejo de Investigaci\u00f3n",
+            "sigla": "CI",
+            "divisiones": [
+                {
+                    "name": "Consejo",
+                    "sigla": "cci",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1995,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2019,
+                            "ini": 2000,
+                            "cod": "A"
+                        },
+                        {
+                            "fin": 0,
+                            "ini": 10000,
+                            "cod": "I"
+                        },
+                        {
+                            "fin": 2017,
+                            "ini": 2000,
+                            "cod": "O"
+                        }
+                    ]
+                },
+                {
+                    "name": "Presidencia",
+                    "sigla": "ci",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1995,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2010,
+                            "ini": 2003,
+                            "cod": "C"
+                        },
+                        {
+                            "fin": 0,
+                            "ini": 10000,
+                            "cod": "I"
+                        },
+                        {
+                            "fin": 2010,
+                            "ini": 2003,
+                            "cod": "P"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "isF": "si",
+            "name": "Facultad de Ingenier\u00eda",
+            "sigla": "ING",
+            "divisiones": [
+                {
+                    "name": "Consejo Directivo",
+                    "sigla": "cding",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1995,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2000,
+                            "cod": "A"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2000,
+                            "cod": "O"
+                        }
+                    ]
+                },
+                {
+                    "name": "Decanato",
+                    "sigla": "ding",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1995,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2003,
+                            "cod": "C"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2003,
+                            "cod": "P"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "isF": "si",
+            "name": "Facultad de Humanidades",
+            "sigla": "HUM",
+            "divisiones": [
+                {
+                    "name": "Consejo Directivo",
+                    "sigla": "cdh",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1993,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2000,
+                            "cod": "A"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2000,
+                            "cod": "O"
+                        }
+                    ]
+                },
+                {
+                    "name": "Decanato",
+                    "sigla": "dh",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1993,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2003,
+                            "cod": "C"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2003,
+                            "cod": "P"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "isF": "si",
+            "name": "Facultad de Cs. de la Salud",
+            "sigla": "SAL",
+            "divisiones": [
+                {
+                    "name": "Consejo Directivo",
+                    "sigla": "cdsalud",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1985,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2013,
+                            "ini": 2000,
+                            "cod": "A"
+                        },
+                        {
+                            "fin": 2020,
+                            "ini": 1995,
+                            "cod": "I"
+                        },
+                        {
+                            "fin": 2013,
+                            "ini": 2000,
+                            "cod": "O"
+                        }
+                    ]
+                },
+                {
+                    "name": "Decanato",
+                    "sigla": "dsalud",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1980,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2013,
+                            "ini": 2003,
+                            "cod": "C"
+                        },
+                        {
+                            "fin": 2020,
+                            "ini": 1995,
+                            "cod": "I"
+                        },
+                        {
+                            "fin": 2013,
+                            "ini": 2003,
+                            "cod": "P"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "isF": "si",
+            "name": "Facultad de Cs. Naturales",
+            "sigla": "NAT",
+            "divisiones": [
+                {
+                    "name": "Consejo Directivo",
+                    "sigla": "cdnat",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1989,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2023,
+                            "ini": 2008,
+                            "cod": "A"
+                        },
+                        {
+                            "fin": 2023,
+                            "ini": 2001,
+                            "cod": "O"
+                        }
+                    ]
+                },
+                {
+                    "name": "Decanato",
+                    "sigla": "dnat",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1988,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2008,
+                            "ini": 2003,
+                            "cod": "C"
+                        },
+                        {
+                            "fin": 2008,
+                            "ini": 2002,
+                            "cod": "P"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "isF": "si",
+            "name": "Facultad de Cs. Econ\u00f3micas",
+            "sigla": "ECO",
+            "divisiones": [
+                {
+                    "name": "Consejo Directivo",
+                    "sigla": "cdeco",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1995,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2022,
+                            "ini": 2000,
+                            "cod": "A"
+                        },
+                        {
+                            "fin": 2023,
+                            "ini": 2000,
+                            "cod": "O"
+                        }
+                    ]
+                },
+                {
+                    "name": "Decanato",
+                    "sigla": "deco",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1995,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2014,
+                            "ini": 2003,
+                            "cod": "C"
+                        },
+                        {
+                            "fin": 2014,
+                            "ini": 2003,
+                            "cod": "P"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "isF": "si",
+            "name": "Facultad de Cs. Exactas",
+            "sigla": "EXA",
+            "divisiones": [
+                {
+                    "name": "Consejo Directivo",
+                    "sigla": "cdex",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1987,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2000,
+                            "cod": "A"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2000,
+                            "cod": "O"
+                        }
+                    ]
+                },
+                {
+                    "name": "Decanato",
+                    "sigla": "dex",
+                    "secciones": [
+                        {
+                            "fin": 2023,
+                            "ini": 1984,
+                            "cod": "R"
+                        },
+                        {
+                            "fin": 2022,
+                            "ini": 2003,
+                            "cod": "C"
+                        },
+                        {
+                            "fin": 2009,
+                            "ini": 2003,
+                            "cod": "P"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ],
+    "secciones": [
+        {
+            "name": "Resoluciones",
+            "order": 1,
+            "t": "Resoluciones - ",
+            "cod": "R"
+        },
+        {
+            "name": "Actas",
+            "order": 2,
+            "t": "Actas - ",
+            "cod": "A"
+        },
+        {
+            "name": "Compras",
+            "order": 3,
+            "t": "Compras - ",
+            "cod": "C"
+        },
+        {
+            "name": "Digestos",
+            "order": 4,
+            "t": "Digestos - ",
+            "cod": "D"
+        },
+        {
+            "name": "Ordenes del d\u00eda",
+            "order": 5,
+            "t": "Ordenes del d\u00eda - ",
+            "cod": "O"
+        },
+        {
+            "name": "Indices",
+            "order": 6,
+            "t": "Indices - ",
+            "cod": "I"
+        },
+        {
+            "name": "Presupuesto",
+            "order": 7,
+            "t": "Presupuestos - ",
+            "cod": "P"
+        }
+    ]
 }

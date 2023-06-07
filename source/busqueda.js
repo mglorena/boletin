@@ -2,7 +2,16 @@ var data;
 var host = "http://bo.unsa.edu.ar/";
 
 $(document).ready(function () {
-  $.getJSON("data.json", function (json) {
+  var randomKey = localStorage.getItem("cacheKey");
+
+  forceUpdateCache = true;
+
+  if (!randomKey || forceUpdateCache) {
+    randomKey = "" + Math.random();
+    localStorage.setItem("cacheKey", randomKey);
+  }
+
+  $.getJSON("data.json?v=" + randomKey, function (json) {
     buildSecciones(json["secciones"]);
     buildDivsLinks(json["orgas"], json["secciones"]);
   });
@@ -22,19 +31,82 @@ function searchInfoSec(cod, divsecciones) {
     console.log(error);
   }
 }
+function volverDivs(div) {
+  $("#" + div).hide();
+  $("#" + div + "A").show();
+  $("#pnlOrgas").show();
+}
+function mostrarDocs(url, div, anio) {
+  $("#" + div + "A").hide();
+  $("#pnlOrgas").hide();
+
+  $("#" + div).show();
+  var page = url + "?C=N;O=D";
+  $("#contenedor").load(page, function () {
+    var html = "<div>";
+    $("#contenedor").find("hr").parent().parent().remove();
+    $("#contenedor")
+      .find("a")
+      .each(function () {
+        var oldUrl = $(this).attr("href"); // Get current url
+        $(this).attr("target","_blank");
+        $(this).attr("href", url + "/" + oldUrl);
+      });
+    $('a:contains("Name"):not(:has(*))').parent().parent().remove();
+    $('a:contains("Parent Directory"):not(:has(*))').parent().parent().remove();
+    var mRes = "";
+    var htmlR = $("#contenedor").find("tr");
+    if (typeof htmlR[0] == "undefined") {
+      mRes =
+        "<div class='resos'><p sytle='margin-left:10px'>No hay resultados. </p></div>";
+    }
+
+    html +=
+      "<div style='marign-bottom:10px'> <a href='#' onclick=\"volverDivs('" +
+      div +
+      "');\">< Volver</a></div>" +
+      "<div><p style='color: #4F4848;font-weight: bold;'>Año : " +
+      anio +
+      "</p></div>" +
+      mRes +
+      "<div class='addScroll'><table style='width:100%' cellpading='4' cellspacing='2'>" +
+      $("#contenedor").find("table").html() +
+      "</table></div>";
+    html += "</div>";
+    $("#" + div).html(html);
+  });
+}
 function links(sec, org, div) {
-  var html = "<div style='maring:10px'>";
+  var html =
+    "<div style='maring:10px'  id='linkDocs' class='" +
+    org.sigla +
+    "-lists'></div>";
+  html +=
+    "<div style='maring:10px'  id='linkDocsA' class='" +
+    org.sigla +
+    "-listsA'>";
   var count = 0;
   var sep = "";
+
   try {
     for (var k = sec.fin; k >= sec.ini; k--) {
       var url = host + div.sigla.toLowerCase() + "/" + sec.cod + k;
-      html += "<a href='" + url + "'>" + sep + k + "</a>";
+      html +=
+        "<a onclick=\"mostrarDocs('" +
+        url +
+        "','linkDocs','" +
+        k +
+        "');\" >" +
+        sep +
+        k +
+        "</a>";
       sep = " | ";
       count++;
     }
 
     html += "</div>";
+    html = html.replaceAll("linkDocsA", sec.cod + "-" + div.sigla + "listA");
+    html = html.replaceAll("linkDocs", sec.cod + "-" + div.sigla + "list");
   } catch (error) {
     console.log("Error generando links de " + org.sigla);
     console.log(error);
@@ -46,6 +118,7 @@ function constrLinks(org, listSecciones) {
   var html = "";
   try {
     var divisiones = org["divisiones"];
+
     for (var j = 0; j < divisiones.length; j++) {
       var dvs = divisiones[j];
       for (var i = 0; i < dvs["secciones"].length; i++) {
@@ -53,14 +126,30 @@ function constrLinks(org, listSecciones) {
         var dataSec = searchInfoSec(sec.cod, listSecciones);
         var classCss = "s" + dataSec[0] + org.sigla;
         var idDiv = classCss + "-" + dvs.sigla;
-        if (sec.ini != 0) {
+        if (sec.ini != 10000) {
           html +=
             "<div id='" + idDiv + "'  class='resos " + classCss + "' hidden >";
+          html += "<p>" + org.name + "</p>";
           html += "<p>" + dataSec[1] + dvs.name + "</p>";
           html += links(sec, org, dvs);
           html += "</div>";
         } else {
-          html += constLinkFolder(sec.seccionFolder, org.sigla, sec.nameFolder);
+          var classCss = "s" + sec.seccionFolder + org.sigla;
+
+          html +=
+            "<div id='" +
+            classCss +
+            "'  class='resos " +
+            classCss +
+            "' hidden >";
+          var name = "<p>" + dataSec[1] + dvs.name + "</p>";
+          html += constLinkFolder(
+            name,
+            sec.seccionFolder,
+            org.sigla,
+            sec.nameFolder
+          );
+          html += "</div>";
         }
       }
     }
@@ -72,18 +161,44 @@ function constrLinks(org, listSecciones) {
   return html;
 }
 
-function constLinkFolder(seccionFolder, sigla, nameFolder) {
-  var html = "";
+function constLinkFolder(name, seccionFolder, sigla, nameFolder) {
   try {
+    var url = host + nameFolder;
+    var page = url + "?C=N;O=D";
     var classCss = "s" + seccionFolder + sigla;
-    html +=
-      "<div id='" + classCss + "'  class='resos " + classCss + "' hidden >";
-    html +=
-      "<p><a href='" +
-      host +
-      nameFolder.toLowerCase() +
-      "'>Lista de documentos </a></p>";
-    html += "</div>";
+    var html = "";
+    $("#contenedorFolder").load(page, function () {
+      var html = "<p>" + name + "</p>";
+      var classCss = "s" + seccionFolder + sigla;
+      $("#contenedorFolder").find("hr").parent().parent().remove();
+      $("#contenedorFolder")
+        .find("a")
+        .each(function () {
+          var oldUrl = $(this).attr("href"); // Get current url
+          $(this).attr("href", url + "/" + oldUrl);
+        });
+      $('a:contains("Name"):not(:has(*))').parent().parent().remove();
+      $('a:contains("Parent Directory"):not(:has(*))')
+        .parent()
+        .parent()
+        .remove();
+      var mRes = "";
+      var htmlR = $("#contenedorFolder").find("tr");
+
+      if (typeof htmlR[0] == "undefined") {
+        mRes =
+          "<div class='resos'><p sytle='margin-left:10px'>No hay resultados. </p></div>";
+      }
+      html +=
+        "<div style='marign-bottom:10px'> <a href='#' onclick=\"volverDivs('" +
+        classCss +
+        "');\">< Volver</a></div><br/>" +
+        mRes +
+        "<table style='width:100%' cellpading='4' cellspacing='2'>" +
+        $("#contenedorFolder").find("table").html() +
+        "</table>";
+      $("#" + classCss).html(html);
+    });
   } catch (error) {
     console.log("No se pudo generar link a folder " + sigla);
     console.log(error);
@@ -101,11 +216,22 @@ function buildDivsLinks(orgas, listSecciones) {
       if (typeof org["divisiones"] != "undefined") {
         html += constrLinks(org, listSecciones);
       } else {
-        console.log(org.name + ": No tiene divisiones");
         if (typeof org["seccionFolder"] != "undefined") {
-          html += constLinkFolder(org.seccionFolder, org.sigla, org.nameFolder);
-        } else {
-          console.log(org.name + ": No tiene folder");
+          var classCss = "s" + org.seccionFolder + org.sigla;
+          html +=
+            "<div id='" +
+            classCss +
+            "'  class='resos " +
+            classCss +
+            "' hidden >";
+          var name = "<p>" + org.name + "</p>";
+          html += constLinkFolder(
+            name,
+            org.seccionFolder,
+            org.sigla,
+            org.nameFolder
+          );
+          html += "</div>";
         }
       }
     }
@@ -175,6 +301,8 @@ function mostrar(sigla) {
     showInfoSeccion(seccion);
     $("#" + seccion).focus();
     var classCss = seccion + sigla;
+    $("." + sigla + "-listsA").show();
+    $("." + sigla + "-lists").hide();
     var divList = $("div[id^='" + classCss + "']");
     if (divList.length == 0) {
       $("#divMessage").show();
@@ -208,15 +336,7 @@ function openSeccion(cod) {
   $("#" + cod).addClass("active");
   $("#" + cod).addClass("activeSec");
   showInfoSeccion(cod);
+  $("#pnlOrgas").show();
   ocultarDivs();
   $("#" + cod).focus();
-  // ocultarContacto();
 }
-/*function mostrarContacto() {
-  $("#divSeccionData").hide();
-  $("#divContacto").show();
-}
-function ocultarContacto() {
-  $("#divSeccionData").show();
-  $("#divContacto").hide();
-}*/

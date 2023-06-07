@@ -36,6 +36,11 @@ footer {
 .main-footer {
 	background: #E9E9E9;
 	vertical-align: top;
+	position: absolute;
+  bottom: 0;
+
+  
+  
 }
 .main-footer h5 {
 	margin-top: 0px;
@@ -2927,6 +2932,9 @@ inline-size: 100%;
 	color : #46A948;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	height: max-content;
+	border: 1px solid red;
+	height: 400px;
 	
 }
 .resos p{
@@ -2956,4 +2964,12 @@ h5 .h5-footer{
 .activeSec > a > h6{
 	
 	color: #fff;
+}
+.addScroll {
+	overflow-y: auto;
+	max-height: 200px;
+  }
+a:visited {
+    color: #337ab7;
+    font-weight: 500;
 }
